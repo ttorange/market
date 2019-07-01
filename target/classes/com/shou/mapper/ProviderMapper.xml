@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shou.mapper.ProviderMapper">
+    <update id="updateProById" parameterType="com.shou.bean.Provider">
+        update provider
+        SET
+        proName = #{provider.proName, jdbcType = VARCHAR},
+        proContacts = #{provider.proContacts, jdbcType = VARCHAR},
+        proPhone=#{provider.proPhone,jdbcType=VARCHAR}
+        WHERE
+        proId = #{proId}
+    </update>
+    <select id="selectProByLimitAndOffset" resultType="com.shou.bean.Provider">
+        SELECT proId,proName,proContacts,proPhone
+        from provider
+        LIMIT #{offset},#{limit}
+    </select>
+
+
+</mapper>
