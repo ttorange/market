@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>登录页面</title>
+    <title>管理员登陆</title>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
         <div class="col-md-4 col-md-offset-4" style="margin: 380px 380px">
             <div class="login-panel panel panel-default" >
                 <div class="panel-heading">
-                    <h3 class="panel-title" style="text-align: center;">网上商城管理系统</h3>
+                    <h3 class="panel-title" style="text-align: center;">登录</h3>
                 </div>
                 <div class="panel-body">
                     <form role="form" action="#" method="post" id="login_form">
@@ -50,12 +50,12 @@
     $(function () {
         $("#login_btn").click(function () {
             $.ajax({
-                url:"/hrms/dologin",
+                url:"/market/dologin",
                 type:"POST",
                 data:$("#login_form").serialize(),
                 success:function (result) {
                     if(result.code == 100){
-                        window.location.href= "/hrms/main";
+                        window.location.href= "/market/main";
                     }else {
                         alert(result.extendInfo.login_error);
                     }

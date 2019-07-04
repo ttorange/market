@@ -1,4 +1,4 @@
-package com.hrms.util;
+package com.shou.util;
 
 import java.util.HashMap;
 import java.util.Map;

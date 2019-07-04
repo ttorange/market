@@ -9,7 +9,7 @@
   <welcome-file-list>
     <welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
   </welcome-file-list>
-
+  
   <!-- Bootstraps the root web application context before servlet initialization -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

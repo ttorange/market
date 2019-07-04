@@ -34,7 +34,7 @@ public interface ProviderMapper {
      * =================================查询============================================
      */
     @Select({"SELECT", SELECT_FIELDS, "FROM", TABLE_NAME, "WHERE proId=#{proId}" })
-    Provider selectPorById(@Param("proId") Integer deptId);
+    Provider selectPorById(@Param("proId") Integer proId);
     @Select({"SELECT", SELECT_FIELDS, "FROM", TABLE_NAME, "WHERE proName=#{proName}" })
     Provider selectProByName(@Param("proName") String proName);
     @Select({"SELECT", SELECT_FIELDS, "FROM", TABLE_NAME})

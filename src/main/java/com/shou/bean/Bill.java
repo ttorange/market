@@ -1,28 +1,32 @@
 package com.shou.bean;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 public class Bill {
-    private Integer BillId;
+    private Integer BilId;
     private String GoodsName;
-    private Double Amount;
+    private String proName;
+    private Integer Amount;
     private Integer isPay;
-    private Timestamp createTime;
 
-    public Bill(Integer billId, String goodsName, Double amount, Integer isPay, Timestamp createTime) {
-        BillId = billId;
-        GoodsName = goodsName;
-        Amount = amount;
-        this.isPay = isPay;
-        this.createTime = createTime;
+    @Override
+    public String toString() {
+        return "Bill{" +
+                "BilId=" + BilId +
+                ", GoodsName='" + GoodsName + '\'' +
+                ", proName='" + proName + '\'' +
+                ", Amount=" + Amount +
+                ", isPay=" + isPay +
+                '}';
     }
 
-    public Integer getBillId() {
-        return BillId;
+    public Integer getBilId() {
+        return BilId;
     }
 
-    public void setBillId(Integer billId) {
-        BillId = billId;
+    public void setBilId(Integer bilId) {
+        BilId = bilId;
     }
 
     public String getGoodsName() {
@@ -33,11 +37,19 @@ public class Bill {
         GoodsName = goodsName;
     }
 
-    public Double getAmount() {
+    public String getProName() {
+        return proName;
+    }
+
+    public void setProName(String proName) {
+        this.proName = proName;
+    }
+
+    public Integer getAmount() {
         return Amount;
     }
 
-    public void setAmount(Double amount) {
+    public void setAmount(Integer amount) {
         Amount = amount;
     }
 
@@ -49,12 +61,14 @@ public class Bill {
         this.isPay = isPay;
     }
 
-    public Timestamp getCreateTime() {
-        return createTime;
+    public Bill() {
     }
 
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
+    public Bill(Integer bilId, String goodsName, String proName, Integer amount, Integer isPay) {
+        BilId = bilId;
+        GoodsName = goodsName;
+        this.proName = proName;
+        Amount = amount;
+        this.isPay = isPay;
     }
-
 }

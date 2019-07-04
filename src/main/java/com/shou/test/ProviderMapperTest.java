@@ -1,5 +1,6 @@
 package com.shou.test;
 
+import com.shou.bean.Bill;
 import com.shou.bean.Provider;
 import com.shou.mapper.ProviderMapper;
 import org.junit.Test;
@@ -9,6 +10,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -17,15 +20,16 @@ public class ProviderMapperTest {
     @Autowired
     private ProviderMapper providerMapper;
 
+
     @Test
     public void deleteProtTest(){
-        int res = providerMapper.deleteProById(2);
+        int res = providerMapper.deleteProById(10);
         System.out.println(res);
     }
 
     @Test
     public void selbyIDtTest(){
-        Provider provider=providerMapper.selectPorById(3);
+        Provider provider=providerMapper.selectPorById(8);
         System.out.println(provider);
     }
     @Test
@@ -66,7 +70,5 @@ public class ProviderMapperTest {
         int res=providerMapper.getCount();
         System.out.println(res);
     }
-
-
 
 }
