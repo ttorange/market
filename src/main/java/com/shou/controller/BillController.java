@@ -44,6 +44,18 @@ public class BillController {
             return JsonMsg.fail();
         }
     }
+    @RequestMapping(value = "/seclectBill/{bilId}",method = RequestMethod.POST)
+    @ResponseBody
+    public JsonMsg selectBill(@PathVariable("bilId") Integer bilId){
+        Bill bill=billService.selectBillById(bilId);
+        if(bilId!=null){
+            return JsonMsg.success().addInfo("bil",bill);
+        }
+        else {
+            return JsonMsg.fail();
+        }
+    }
+
     //id查询
     @RequestMapping(value = "/getBillById/{bilId}",method = RequestMethod.GET)
     @ResponseBody

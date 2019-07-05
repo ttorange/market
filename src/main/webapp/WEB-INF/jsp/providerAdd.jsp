@@ -15,21 +15,21 @@
             <div class="modal-body">
                 <form class="form-horizontal add_pro_form">
                     <div class="form-group">
-                        <label for="add_proName" class="col-sm-2 control-label">供应商名称</label>
+                        <label for="add_proName" class="col-sm-2 control-label">供应商名</label>
                         <div class="col-sm-8">
-                            <input type="text" name="proName" class="form-control" id="add_proName" placeholder="xxx">
+                            <input type="text" name="proName" class="form-control" id="add_proName" placeholder="provider name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="add_proContacts" class="col-sm-2 control-label">联系人</label>
                         <div class="col-sm-8">
-                            <input type="text" name="proContacts" class="form-control" id="add_proContacts" placeholder="XXX">
+                            <input type="text" name="proContacts" class="form-control" id="add_proContacts" placeholder="Contacts">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="add_proPhone" class="col-sm-2 control-label">电话</label>
                         <div class="col-sm-8">
-                            <input type="text" name="proPhone" class="form-control" id="add_proPhone" placeholder="XXX">
+                            <input type="text" name="proPhone" class="form-control" id="add_proPhone" placeholder="phone number">
                         </div>
                     </div>
                 </form>

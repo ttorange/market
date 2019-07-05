@@ -32,7 +32,7 @@
                                placeholder="请输入供应商名称">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-selctPro">搜索供应商</button>
+                        <button type="button" class="btn selectPro">搜索供应商</button>
                     </div>
                 </form>
                 <!-- Table -->
@@ -159,6 +159,9 @@
                 }
             });
         }
+    });
+    $(".selectPro").click(function () {
+        alert("充VIP开通查询功能")
     });
 
 </script>

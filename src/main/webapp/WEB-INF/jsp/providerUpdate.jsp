@@ -65,7 +65,7 @@
                     $("#update_proContacts").val(proData.proContacts);
                     $("#update_proPhone").val(proData.proPhone);
                 }else {
-                    alert(result.extendInfo.get_dept_error);
+                    alert(result.extendInfo.get_pro_error);
                 }
             }
         });

@@ -27,14 +27,11 @@
                     </ol>
                 </div>
                 <!-- Table -->
-                <form class="form-inline" role="form">
-                    <div class="form-group">
+                <form class="form-inline selectBillFrom" role="form">
+                    <div class="form-group ">
                         <label>输入订单ID</label>
-                        <input type="number" class="form-control" id="bill_Id"
-                               placeholder="请输入订单ID">
-                    </div>
-                    <div class="form-group">
-                        <button type="button" class="btn bill_select_btn">搜索订单</button>
+                        <input type="value" class="form-control" id="bilId" placeholder="请输入订单ID">
+                        <a href="#" role="button" class="btn btn-primary bill_select_btn" data-toggle="modal" data-target=".bill-view-modal">订单详情</a>
                     </div>
                 </form>
                 <table class="table table-bordered table-hover" id="bill_table">

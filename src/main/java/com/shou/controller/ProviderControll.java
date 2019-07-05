@@ -83,7 +83,7 @@ public class ProviderControll {
     public ModelAndView getProList(@RequestParam(value = "pageNo",defaultValue = "1")Integer pageNo){
         ModelAndView mv=new ModelAndView("providerPage");
         //每页记录的行数
-        int limit=3;
+        int limit=5;
         //记录总数
         int totalItems=providerService.getProCount();
         int temp=totalItems/limit;
